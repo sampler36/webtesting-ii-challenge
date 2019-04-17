@@ -26,9 +26,15 @@ class App extends Component {
   ball = e => {
     e.preventDefault();
     let balls = this.state.balls + 1;
+    if(balls < 5 ) { 
       this.setState({
         balls: balls
       })
+    } else{
+      this.setState({
+        balls:0
+      })
+    }
   };
 
   foul = e => {
