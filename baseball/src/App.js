@@ -12,9 +12,15 @@ class App extends Component {
   strike = e => {
     e.preventDefault();
     let strikes = this.state.strikes + 1;
+    if(strikes < 4) { 
       this.setState({
         strikes: strikes
       })
+    } else{
+      this.setState({
+        strikes:0
+      })
+    }
   };
 
   ball = e => {
